@@ -1,0 +1,94 @@
+---
+title: "Assignment 3 - Web data"
+author: "FILL IN YOUR FULL NAME"
+date: "`r format(Sys.time(), '%B %d, %Y | %H:%M:%S | %Z')`"
+output:
+  html_document:
+    code_folding: show
+    df_print: paged
+    highlight: tango
+    number_sections: no
+    theme: cosmo
+    toc: no
+---
+  
+<style>
+div.answer {background-color:#f3f0ff; border-radius: 5px; padding: 20px;}
+</style>
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval = TRUE,
+                      error = FALSE,
+                      message = FALSE,
+                      warning = FALSE,
+                      comment = NA)
+```
+
+<!-- Do not forget to input your Github username in the YAML configuration up there --> 
+
+***
+
+```{r, include = T}
+# LOAD THE PACKAGES YOU ARE USING IN THIS CODE CHUNK
+```
+
+<br>
+
+***
+
+
+### Task 1 - Speaking regex [7 points in total]
+
+a) Below is a messy string that contains data on IP addresses and associated regions as well as latitudes and longitudes. Use regular expressions to parse information from the string and store all variables in a data frame. Return the data frame. [5 points]
+
+```{r}
+ip_geolocated <- "24.33.233.189 Ohio 39.6062 -84.1695 55.206.140.56 Arizona 31.5552 -110.35 199.53.213.86 Zurich 47.3686 8.5391 85.114.48.220 Split-Dalmatia 43.0432 16.0875 182.79.240.83 Telangana 17.411 78.4487 98.65.172.56 Provence-Alpes-Cote d'Azur 43.2971 5.3668"
+```
+
+<br>
+
+b) The following code hides a secret message. Crack the complete message with R and regular expressions. Once you have cracked it, collapse the solution into one single string. [2 points]
+
+```{r}
+secret <- "clcopCow1zmstc0d87wnkig7OvdicpNuggvhryn92Gjuwczi8hqrfpRxs5Aj5dwpn0TanwoUwisdij7Lj8kpf03AT5Idr3coc0bt7yczjatOaootj55t3Nj3ne6c4Sfek.r1w1YwwojigOd6vrfUrbz2.2bkAnbhzgv4R9i05zEcrop.wAgnb.RqoE65fGEa1otfb7wXm24k.6t3sH9zqe5fy89n6Ed5t9kc4fR905gmc4Ogxo5nhk!gr"
+```
+
+<br>
+
+***
+
+### Task 2 - Scraping newspaper headlines [13 points in total]
+
+Use R to scrape the article headlines from https://www.theguardian.com/international. 
+
+a) Construct an XPath expression (not using SelectorGadget, but your own) that captures the headline texts from the website. Then, apply it, report the number of unique headings, and provide a random sample of 5 observations from the vector of scraped headlines. [3 points]
+
+```{r}
+# YOUR CODE HERE
+```
+
+
+<br>
+
+b) Identify the 5 most frequent words in all headlines, excluding English stopwords. Report their frequency. [3 points]
+
+```{r}
+# YOUR CODE HERE
+```
+
+<br>
+
+c) Develop an XPath expression that locates the set of links pointing to the articles behind the headings from the previous tasks. Apply it to extract those links, storing them in a vector. Report the length of that vector; then, list the first 5 links. [3 points]
+
+```{r}
+# YOUR CODE HERE
+```
+
+<br>
+
+d) Provide polite code that downloads the article HTMLs to a local folder. Explain why your code follows best practice of polite scraping by implementing at least three practices (bullet points are sufficient). Provide proof that the download was performed successfully by listing the first 5 files in the folder and reporting the total number of files contained by the folder. Make sure that the folder itself is not synced to GitHub using `.gitignore`. [4 points]
+
+```{r}
+# YOUR CODE HERE
+```
